@@ -1,0 +1,93 @@
+/* Code to create dimension changer buttons UI part*/
+{
+    "style": "",
+    "script": "",
+    "title": "",
+    "showCarousel": true,
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "padding": "0px",
+                            "margin": "0px",
+                            "spacing": "0px",
+                            "style": {
+                                "borderWidth": "2px",
+                                "borderColor": "#000000",
+                                "borderStyle": "solid"
+                            },
+                            "width": "20%",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "style": {
+                                        "font-size": "12px",
+                                        "font-weight": "bold",
+                                        "padding": "0px",
+                                        "margin": "0px",
+                                        "spacing": "0px"
+                                    },
+                                    "size": "medium",
+                                    "text": "ActiveTails",
+                                    "selectAction": {
+                                        "type": "activetails1",
+                                        "title": "title",
+                                        "item": true
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "style": {
+                                "borderWidth": "2px",
+                                "borderColor": "#000000",
+                                "borderStyle": "solid",
+                                "margin": "10px"
+                            },
+                            "width": "20%",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "style": {
+                                        "font-size": "12px",
+                                        "font-weight": "bold"
+                                    },
+                                    "size": "medium",
+                                    "text": "OperatorName",
+                                    "selectAction": {
+                                        "type": "operatoename1",
+                                        "title": "title",
+                                        "item": true
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "actions": []
+}
+
+/*Need to add this code in the script
+// Access the items array
+var item = prism.activeDashboard.widgets.$$widgets[3].metadata.panels[0].items[3];
+ 
+ 
+item.disabled = !item.disabled;
+ 
+ 
+// Refresh the widget or the dashboard if necessary
+prism.activeDashboard.widgets.$$widgets[3].refresh();
+ 
+widget.changesMade('ready', ['metadata', 'properties_changed']);
+widget.refresh();
+
+Create action with this script
