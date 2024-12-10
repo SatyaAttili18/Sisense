@@ -1,0 +1,64 @@
+{
+    "style": "widget[widgetid='6756c1e3b6efce00332b5057'] .blox-slides{display:inline-block} .blox-col:hover {background-color:#eee; border-radius:10px } .clicked{background-color: lightblue}",
+    #.blox-slides{display:inline-block} -------------------gives you data in the row format-------------------------------------
+    #.blox-slides{display:block} --------------------------gives you data in the Column format----------------------------------
+    "script": "$('.blox-col').click(function() { $('.blox-col').removeClass('clicked'); $(this).addClass('clicked'); });",
+    "title": "",
+    "showCarousel": false,
+    "backgroundImage": "",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "style": {
+                                "padding": "10px"
+                            },
+                            "class": "blox-col",
+                            "separator": true,
+                            "selectAction": {
+                                "type": "Filters",
+                                "title": "{panel:AircraftType}",
+                                "data": {
+                                    "filters": [
+                                        {
+                                            "filterName": "AircraftType",
+                                            "filterJaql": {
+                                                "members": [
+                                                    "{panel:AircraftType}"
+                                                ],
+                                                "custom": true
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "size": "light",
+                                    "weight": "light",
+                                    "horizontalAlignment": "center",
+                                    "style": {
+                                        "padding": "5px",
+                                        "borderWidth": "2px",
+                                        "borderColor": "#000",
+                                        "borderStyle": "solid",
+                                        "border-radius": "10px"
+                                    },
+                                    "color": "default",
+                                    "text": "{panel:AircraftType}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "actions": []
+}
