@@ -1,0 +1,17 @@
+widget.on('processresult', function(a,b){
+b.result.plotOptions.areaspline.fillColor = {
+                        linearGradient: {
+                            x1: 0,
+                            y1: 0,
+                            x2: 0,
+                            y2: 1
+                        },
+                        stops: [
+                           [0, 'rgba(17, 120, 153, 0.4)'],
+                            [1, 'rgba(17, 120, 153, 0.0)']
+                        ]
+                    }
+ 
+})
+
+//script to add for area map to get color gradient
