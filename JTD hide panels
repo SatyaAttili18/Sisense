@@ -1,0 +1,6 @@
+Hide dashboard panels
+If you want to hide panels in your target ("_drill") dashboard, it’s possible to achieve it with the help of JavaScript code applied on a widget level.  
+
+For example, to hide the left-hand side panel, toolbar, and header, you can use the script below:
+
+prism.jumpToDashboard(widget, { displayDashboardsPane:false, displayToolbarRow :false, displayHeaderRow :false});
