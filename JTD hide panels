@@ -4,3 +4,47 @@ If you want to hide panels in your target ("_drill") dashboard, it’s possible 
 For example, to hide the left-hand side panel, toolbar, and header, you can use the script below:
 
 prism.jumpToDashboard(widget, { displayDashboardsPane:false, displayToolbarRow :false, displayHeaderRow :false});
+
+
+
+Change navigation type
+To open a target dashboard in the same tab, you can use drilledDashboardDisplayType:3 parameter in your script. To open it in a separate tab, use drilledDashboardDisplayType:1. 
+
+The example script will look like this:
+
+prism.jumpToDashboard(widget, { displayDashboardsPane:false, displayToolbarRow :false, displayHeaderRow :false, drilledDashboardDisplayType:1});
+
+
+
+Multiple target dashboards on a pivot
+The navigation type drillToDashboardNavigateTypePivot:1 for a pivot table allows you to set multiple target dashboards like on the screenshot below:
+
+The example widget script is below:
+
+prism.jumpToDashboard(widget, {
+drillToDashboardNavigateTypePivot: 1,
+dashboardIds: [{
+id: "568a8d9eaca677c414000001",
+caption: "Dashboard Name"
+},
+{
+id: "123a8d9f3fd678c433000003",
+caption: "Other New Name"
+}
+]
+});
+
+It’s also possible to jump to different dashboards from different pivot columns:
+
+prism.jumpToDashboard(widget, {
+multipleTargetDashboardsForPivot: true,
+targetDashboards: [{
+dashboardId: "5c0a6e7797800b7dd0c38b8c",
+pivotColumnTitle: "Rev1"
+},
+{
+dashboardId: "5c0a7fd8e13b6049c896b63c",
+pivotColumnTitle: "Brand"
+}
+]
+});
